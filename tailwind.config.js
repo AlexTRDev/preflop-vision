@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import daisyui from "daisyui";
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -8,17 +9,17 @@ export default {
         sans: ["Roboto", "sans-serif"], // Fuente predeterminada sans-serif
         serif: ["Lora", "serif"], // Fuente predeterminada serif
       },
-    },
-    colors: {
-      or: "#fca5a5",
-      mr: "#f87171",
-      allin: "#ef4444",
-      iso: "#dc2626",
-      call: "#b91c1c",
+      // Extiende las columnas y filas del grid para 13x13
+      gridTemplateColumns: {
+        13: "repeat(13, minmax(0, 1fr))",
+      },
+      gridTemplateRows: {
+        13: "repeat(13, minmax(0, 1fr))",
+      },
     },
   },
   daisyui: {
-    themes: ["fantasy", "forest"],
+    themes: ["forest"], // Mantienes tus temas existentes
   },
   plugins: [daisyui],
   darkMode: "selector",
