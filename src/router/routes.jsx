@@ -1,39 +1,52 @@
-import { NavLink } from "react-router-dom";
 import { createBrowserRouter } from "react-router-dom";
-import { AppLayout, PreflopVisionLayout } from "../Layouts";
-import { Outlet } from "react-router-dom";
-import App from "../App";
+import {
+  AppComponent,
+  ControllerPreflopVisionComponent,
+  EditMatrixComponent,
+  HeroComponent,
+  NavBarPrefolVisionComponent,
+  ViewTableComponent,
+} from "../components";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: (
-      <>
-        <App />
-        <Outlet />
-      </>
-    ),
+    path: "",
+    element: <AppComponent />,
     children: [
       {
         path: "/",
-        element: (
-          <>
-            <div>
-              <NavLink to="/preflop-vision">Preflop Vision</NavLink>
-              {/* <NavLink to="/admin">Administrador</NavLink> */}
-            </div>
-            <Outlet />
-          </>
-        ),
+        element: <HeroComponent />,
         children: [],
       },
       {
-        path: "/admin",
-        element: <AppLayout />,
+        path: "preflop-vision",
+        element: <NavBarPrefolVisionComponent />,
+        children: [
+          {
+            path: "full",
+            element: <ControllerPreflopVisionComponent />,
+            children: [
+              {
+                path: ":id",
+                element: <ViewTableComponent />,
+              },
+            ],
+          },
+          {
+            path: "3h",
+            element: <ControllerPreflopVisionComponent />,
+            children: [{ path: ":id", element: <ViewTableComponent /> }],
+          },
+          {
+            path: "hu",
+            element: <ControllerPreflopVisionComponent />,
+            children: [{ path: ":id", element: <ViewTableComponent /> }],
+          },
+        ],
       },
       {
-        path: "/preflop-vision",
-        element: <PreflopVisionLayout />,
+        path: "tablas/editar/:id",
+        element: <EditMatrixComponent />,
       },
     ],
   },
