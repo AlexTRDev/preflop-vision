@@ -1,9 +1,9 @@
 {
-  "name": "Preflop Vision 1.0",
+  "name": "Preflop Vision 1.1",
   "short_name": "Preflop Vision",
-  "start_url": "/",
+  "start_url": "/?v=1.1",
   "display": "standalone",
-  "background_color": "#454545",
+  "background_color": "#ffffff",
   "theme_color": "#000000",
   "icons": [
     {
