@@ -15,7 +15,7 @@ const ViewTableComponent = () => {
 
   return (
     <div className=" flex  md:mt-4 md:flex-row-reverse flex-col  items-center justify-center">
-      <div className=" h-24  md:h-full flex flex-col items-center justify-center ">
+      <div className=" h-16  md:h-full flex flex-col items-center justify-center ">
         <ul className=" flex flex-wrap gap-1 md:gap-2 md:flex-col md:p-4">
           {selectedMatrix &&
             Object.values(selectedMatrix?.legends)
@@ -29,7 +29,7 @@ const ViewTableComponent = () => {
                     color: legend?.textColor,
                   }}
                 >
-                  <label className="w-[135px] text-center text-[10px] font-medium">
+                  <label className="md:w-[135px] text-center text-[8px] md:text-[10px] font-medium">
                     {legend?.description}
                   </label>
                 </li>
@@ -41,7 +41,7 @@ const ViewTableComponent = () => {
         {selectedMatrix?.matrix?.map(({ combo, color }) => (
           <div
             key={`${combo}`}
-            className=" relative group rounded shadow shadow-white/80 w-7 h-7 md:w-8 md:h-8 flex items-center justify-center text-center text-xs font-semibold "
+            className=" relative group rounded shadow shadow-white/80 text-[10px] w-6 h-6 md:w-8 md:h-8 flex items-center justify-center text-center md:text-xs font-semibold "
             data-tip={color?.description}
             style={{
               backgroundColor: color?.color || "",

@@ -21,21 +21,15 @@ const ControllerPreflopVisionComponent = () => {
   const location = useLocation();
 
   return (
-    <div className=" flex flex-col w-full">
+    <div className=" flex flex-col w-full ">
       <div className="flex-1 w-full ">
         <Outlet />
       </div>
-      <div className="flex-1 grid grid-cols-6 text-[10px] gap-2 mt-4">
+      <div className="flex-1 grid grid-cols-6 text-[10px] gap-2 mb-4">
         {/* 3 HANDLE */}
         {(location.pathname.split("/")[2] === TYPE_GAME.FULL ||
           location.pathname.split("/")[2] === TYPE_GAME.TRHEEHANDLE) && (
-          <div
-            className={`${
-              location.pathname.split("/")[2] === TYPE_GAME.TRHEEHANDLE
-                ? "col-span-6"
-                : "col-span-4"
-            }  grid grid-cols-3 gap-2 `}
-          >
+          <div className={`grid col-span-6  grid-cols-3 gap-2 `}>
             {/* BTN */}
             <div className="flex flex-col w-full h-32 items-center rounded justify-center  text-white bg-info shadow shadow-info ">
               <label className="font-bold text-[12px]">3H | BTN</label>
@@ -227,13 +221,7 @@ const ControllerPreflopVisionComponent = () => {
 
         {(location.pathname.split("/")[2] === TYPE_GAME.FULL ||
           location.pathname.split("/")[2] === TYPE_GAME.HEADSUP) && (
-          <div
-            className={`${
-              location.pathname.split("/")[2] === TYPE_GAME.HEADSUP
-                ? "col-span-6 grid-cols-2"
-                : "col-span-2 grid-rows-2"
-            }  grid gap-2 `}
-          >
+          <div className={` grid gap-2 col-span-6 grid-cols-2`}>
             <div className="rounded flex flex-col h-32 items-center justify-between bg-warning  text-white shadow-md shadow-warning">
               <label className=" font-bold text-[12px] text-black">
                 HU | SB vs BB
