@@ -23,7 +23,7 @@ const HeroComponent = () => {
               claves para conquistar las mesas.
               <br /> ¡Juega con estrategia y gana!"
             </p>
-            <NavLink to="preflop-vision/FULL/3H_BTN_15+_null_null">
+            <NavLink to="preflop-vision/FULL/3H_BTN_16+">
               <button className="btn btn-neutral btn-outline ">
                 Empieza tu Aventura
               </button>

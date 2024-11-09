@@ -6,8 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Roboto", "sans-serif"], // Fuente predeterminada sans-serif
-        serif: ["Lora", "serif"], // Fuente predeterminada serif
+        sans: ["Poppins", "sans-serif"], // Fuente predeterminada sans-serif
       },
       // Extiende las columnas y filas del grid para 13x13
       gridTemplateColumns: {

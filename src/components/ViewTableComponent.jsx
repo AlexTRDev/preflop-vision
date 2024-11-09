@@ -14,22 +14,22 @@ const ViewTableComponent = () => {
   }, [id, viewMatrix]);
 
   return (
-    <div className=" flex  md:mt-4 md:flex-row-reverse flex-col  items-center justify-center">
+    <div className=" flex  md:mt-4 md:flex-row-reverse flex-col items-center justify-center">
       <div className=" h-16  md:h-full flex flex-col items-center justify-center ">
-        <ul className=" flex flex-wrap gap-1 md:gap-2 md:flex-col md:p-4">
+        <ul className=" flex  flex-wrap gap-1 md:gap-2 md:flex-col md:p-4">
           {selectedMatrix &&
             Object.values(selectedMatrix?.legends)
               .sort((a, b) => a.id - b.id)
               .map((legend) => (
                 <li
                   key={legend?.id}
-                  className="flex  items-center p-1 rounded-lg justify-center"
+                  className="flex  items-center md:p-[1px] px-2 rounded justify-center"
                   style={{
                     backgroundColor: legend?.color,
                     color: legend?.textColor,
                   }}
                 >
-                  <label className="md:w-[135px] text-center text-[8px] md:text-[10px] font-medium">
+                  <label className="md:w-[180px] text-center text-[10px] md:text-[12px] font-medium">
                     {legend?.description}
                   </label>
                 </li>

@@ -1,4 +1,4 @@
-const CACHE_NAME = "preflop-vision-v1.1"; // Cambia la versión cada vez que actualices el caché
+const CACHE_NAME = "preflop-vision-v2"; // Cambia la versión cada vez que actualices el caché
 const urlsToCache = [
   "/",
   "/index.html",
