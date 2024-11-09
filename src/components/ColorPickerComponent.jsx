@@ -8,7 +8,7 @@ const ColorPickerComponent = () => {
 
   const handleAddLegend = async () => {
     if (description) {
-      await addLegend({ color, description });
+      await addLegend({ color, description, textColor: "#ffffff" });
       setDescription("");
       setColor(undefined); // Resetear el color a un valor por defecto
     }
