@@ -2,9 +2,9 @@ import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 const navs = [
-  { link: "FULL/3H_BTN_15+_null_null", name: "FULL" },
-  { link: "3H/3H_BTN_15+_null_null", name: "3 HANDLE" },
-  { link: "HU/HU_SB_15+_BB_null", name: "HEADS UP" },
+  { link: "FULL/3H_BTN_16+", name: "FULL" },
+  { link: "3H/3H_BTN_16+", name: "3 HANDLE" },
+  { link: "HU/HU_SB_16+_BB", name: "HEADS UP" },
 ];
 
 const NavBarPrefolVisionComponent = () => {
